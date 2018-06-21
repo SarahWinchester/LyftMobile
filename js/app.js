@@ -7,7 +7,7 @@ $(function(){
 
   $(document).ready(function(){
     $('.modal').modal();
-    $("#add-contact").click(getContactData);
+    
   });
    
   

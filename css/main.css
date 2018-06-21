@@ -1,8 +1,38 @@
+/*intro.html*/
 .intro{
     box-sizing: border-box  ;
 }
-.SignUp2{
+.signUpBody{
     background-image: url("../css/assets/img/giflyft2.jpg");
-    background-repeat: repeat;
-  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imageContainer{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.btn{
+    background-color: transparent;
+    border: 1px white solid;
+    font-weight: bold;
+    width: 100px;
+}
+
+/*Index.html css */
+.imgindex{
+    box-sizing: 
+}
+
+/*SignUp.html Css*/
+.navico{
+margin-top: 1.8rem;
+margin-right: 10px;
+
+}
+.colnavico{
+    padding: 0px;
+}
+.dividerline{
+    margin: 0px;
+    padding: 0px;
 }
