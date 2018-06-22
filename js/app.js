@@ -55,18 +55,30 @@ $('.btnSignUp').click(function(){
   })
 });
 
-$('#lab-code').keypress(function(){
-  var $labcode = $(this);
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var code= getParameterByName('code'); 
+
+
+$('#lab-code').keyup(function(){
+  var inputTextFinal = $('#lab-code');
+  console.log(code,inputTextFinal.val());
   
-    if ($labcode.val() === urlParams ) {
-      swal("Good job!", "You made it", "success");
-   
-  }else{
-    swal("Code Incorrect", "Try Again!", "error");
- };
-});
+   if(inputTextFinal.val() === code){
+    swal("Good job!", "You did it!", "success");
+  }else if(inputTextFinal.val().length === 3){
+    swal("No!", "Try Again!", "error");
+  }
 
-
+});.then(function(){
+  window.location.href='Verify.html?code='
 
 //materialize function for  flags
 $(document).ready(function(){
