@@ -21,6 +21,9 @@
 .bgimg{
     background: radial-gradient(rgb(147, 29, 124), rgb(77, 20, 94));    
 }
+#lab-code{
+    margin-bottom: 5rem;
+}
 
 /*Index.html css */
 .imgindex {

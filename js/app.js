@@ -1,3 +1,11 @@
+var getCode = window.location.search.substring(1);
+var splitCode = getCode.split(“&”);
+var pair = splitCode[0].split(“=”);
+var codeValue = pair[1];
+
+var urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams);
 //this function hide the splash and reapper again the image in a soft fade in 
 $(function(){
   $("#copy").hide();
@@ -43,11 +51,20 @@ $('.btnSignUp').click(function(){
   console.log(completeCode);
   swal("Este es tu codigo, no olvides escribirlo! "  + completeCode , {
   }).then(function(){
-    window.location.href='Verify.html?code='+ completeCode;
+    window.location.href='Verify.html?code='+ code1 + code2 + code3;
   })
 });
 
+$('#lab-code').keypress(function(){
+  var $labcode = $(this);
   
+    if ($labcode.val() === urlParams ) {
+      swal("Good job!", "You made it", "success");
+   
+  }else{
+    swal("Code Incorrect", "Try Again!", "error");
+ };
+});
 
 
 
