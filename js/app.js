@@ -1,7 +1,7 @@
-var getCode = window.location.search.substring(1);
-var splitCode = getCode.split(“&”);
-var pair = splitCode[0].split(“=”);
-var codeValue = pair[1];
+// var getCode = window.location.search.substring(1);
+// var splitCode = getCode.split(“&”);
+// var pair = splitCode[0].split(“=”);
+// var codeValue = pair[1];
 
 var urlParams = new URLSearchParams(window.location.search);
 
