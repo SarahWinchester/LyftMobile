@@ -7,15 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../css/main.css">
     <title>Sign Up</title>
 </head>
 
 <body>
      <main class="container">
-         <div class="row">
+                <div class="row">
              <div class="col s2 m4  colnavico">
-                 <i class=" medium material-icons pink-text navico">navigate_before </i>
+                 <a href="../index.html"><i class=" medium material-icons pink-text navico"  >navigate_before </i></a>
              </div>
              <div class="col s10 m4 ">
                  <h4>Sign Up</h4>
@@ -23,15 +25,30 @@
              </div>         
          </div>
          <hr>
+         <br>
+         <div class="row">
+            <div class=" col s6  center iconsflag ">
+                    <select id="flagSelection" onchange="getCountryCode()" >
+                            <option value="" disabled selected>Country</option>
+                            <option class="flagsvalue" value="52" data-icon="http://www.countryflags.io/mx/flat/64.png">MX</option>
+                            <option class="flagsvalue" value="1" data-icon="http://www.countryflags.io/us/flat/64.png">USA</option>
+                            <option class="flagsvalue" value="56" data-icon="http://www.countryflags.io/cl/flat/64.png">CL</option>
+                            <option class="flagsvalue" value="51" data-icon="http://www.countryflags.io/pe/flat/64.png">PE</option>
+                            <option class="flagsvalue" value="55" data-icon="http://www.countryflags.io/br/flat/64.png">BR</option>
+                    </select>
+             </div>
+            <div class="input-field col s6 center">
+            <input id="input_text" id="phoneInput" type="text" data-length="10" placeholder="Phone ">
+            </div>
+        </div>
+        <div>
+        <p class="center" >We will send you a text to verify  your phone</p>
 
-
-         
+        <a class="waves-effect waves-light btn-large btnSignUp ">Next</a>
+        <a class="waves-effect waves-light btn-large btnSignUp btnSignUpDis disabled">Next</a>
+        </div>
      </main>   
  
-
-
-
-   
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
